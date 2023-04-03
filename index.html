@@ -1231,20 +1231,21 @@
         </section>
 
         <!-- Submit Form -->
+
         <div class="form-section">
           <div class="container-form">
             <div class="title">GET IN TOUCH</div>
             <div class="content">
-              <form action="#">
+              <form action="https://formsubmit.co/abhay@achieversproperties.in" method="POST" autocomplete="on">
                 <div class="user-details">
                   <div class="input-box">
                     <span class="details">Full Name</span>
-                    <input type="text" placeholder="Enter your name" required />
+                    <input type="text" name="name" placeholder="Enter your name" required />
                   </div>
                   <div class="input-box">
                     <span class="details">Company name</span>
                     <input
-                      type="text"
+                      type="text" name="name"
                       placeholder="Enter your company"
                       required
                     />
@@ -1252,7 +1253,7 @@
                   <div class="input-box">
                     <span class="details">Email</span>
                     <input
-                      type="text"
+                      type="text" name="email"
                       placeholder="Enter your email"
                       required
                     />
@@ -1260,19 +1261,14 @@
                   <div class="input-box">
                     <span class="details">Phone Number</span>
                     <input
-                      type="text"
+                      type="text" name="number"
                       placeholder="Enter your number"
                       required
                     />
                   </div>
                   <div class="input-box message">
                     <span class="details">Message</span>
-                    <!-- <input
-                      type="text"
-                      placeholder="Enter your message"
-                      required
-                    /> -->
-                    <textarea name="" id=""></textarea>
+                    <textarea name="message" id=""></textarea>
                   </div>
                 </div>
                 <div class="gender-details">
@@ -1297,11 +1293,47 @@
                 </div>
                 <div class="button">
                   <input type="submit" value="Send" />
+                  <input type="hidden" name="_template" value="table">
+                  <input type="hidden" name="_subject" value="Achievers Web New Enquiry">
+                  <input type="hidden" name="_captcha" value="false">
                 </div>
               </form>
             </div>
           </div>
         </div>
+        <!-- <div class="container">
+          <div class="container-form">
+            <div class="box-form">
+              <h3>Get in Touch</h3>
+              <div class="name-form">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Name" id="name" />
+              </div>
+              <div class="email-form">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Email" id="email" />
+              </div>
+              <div class="message-box-form">
+                <textarea
+                  id="msg"
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="button-form">
+                <button id="send" onclick="message()">Send</button>
+              </div>
+              <div class="message-form">
+                <div class="success" id="success">
+                  Your Message Successfully Sent!
+                </div>
+                <div class="danger" id="danger">Feilds Can't be Empty!</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
         <!-- 
         - #BLOG
       -->
@@ -1528,7 +1560,7 @@
                 <a href="tel:+0123456789" class="contact-link">
                   <ion-icon name="call-outline"></ion-icon>
 
-                  <span>+91 9820653531 / 7400072803</span>
+                  <span>+91 9820653531</span>
                 </a>
               </li>
 
