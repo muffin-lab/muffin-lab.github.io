@@ -34,6 +34,154 @@
     <!-- 
     - custom css link
   -->
+    <style>
+      @-webkit-keyframes enter {
+        0% {
+          opacity: 0;
+          top: -10px;
+        }
+        5% {
+          opacity: 1;
+          top: 0px;
+        }
+        50.9% {
+          opacity: 1;
+          top: 0px;
+        }
+        55.9% {
+          opacity: 0;
+          top: 10px;
+        }
+      }
+      @keyframes enter {
+        0% {
+          opacity: 0;
+          top: -10px;
+        }
+        5% {
+          opacity: 1;
+          top: 0px;
+        }
+        50.9% {
+          opacity: 1;
+          top: 0px;
+        }
+        55.9% {
+          opacity: 0;
+          top: 10px;
+        }
+      }
+      @-moz-keyframes enter {
+        0% {
+          opacity: 0;
+          top: -10px;
+        }
+        5% {
+          opacity: 1;
+          top: 0px;
+        }
+        50.9% {
+          opacity: 1;
+          top: 0px;
+        }
+        55.9% {
+          opacity: 0;
+          top: 10px;
+        }
+      }
+      body {
+        background: #1fbeca;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      .loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -27.5px;
+        margin-top: -27.5px;
+      }
+
+      .square {
+        background: white;
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        float: left;
+        top: -10px;
+        margin-right: 5px;
+        margin-top: 5px;
+        position: relative;
+        opacity: 0;
+        -webkit-animation: enter 6s infinite;
+        animation: enter 6s infinite;
+      }
+
+      .enter {
+        top: 0px;
+        opacity: 1;
+      }
+
+      .square:nth-child(1) {
+        -webkit-animation-delay: 1.8s;
+        -moz-animation-delay: 1.8s;
+        animation-delay: 1.8s;
+      }
+
+      .square:nth-child(2) {
+        -webkit-animation-delay: 2.1s;
+        -moz-animation-delay: 2.1s;
+        animation-delay: 2.1s;
+      }
+
+      .square:nth-child(3) {
+        -webkit-animation-delay: 2.4s;
+        -moz-animation-delay: 2.4s;
+        animation-delay: 2.4s;
+        background: #fdc96f;
+      }
+
+      .square:nth-child(4) {
+        -webkit-animation-delay: 0.9s;
+        -moz-animation-delay: 0.9s;
+        animation-delay: 0.9s;
+      }
+
+      .square:nth-child(5) {
+        -webkit-animation-delay: 1.2s;
+        -moz-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+      }
+
+      .square:nth-child(6) {
+        -webkit-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+        animation-delay: 1.5s;
+      }
+
+      .square:nth-child(8) {
+        -webkit-animation-delay: 0.3s;
+        -moz-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+
+      .square:nth-child(9) {
+        -webkit-animation-delay: 0.6s;
+        -moz-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .last {
+        margin-right: 0;
+      }
+    </style>
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- 
@@ -48,6 +196,7 @@
   </head>
 
   <body>
+    <div id="preloader"></div>
     <!-- 
     - #HEADER
   -->
@@ -930,18 +1079,19 @@
               <div class="legal-card">
                 <div class="legal-card-image">
                   <img
-                    src="./assets/images-2/lawyer-1.jpg"
+                    src="./assets/images-2/Jairam-yadav.jpeg"
                     alt="Profile image"
                   />
                 </div>
-                <p class="legal-name">Julie Watson</p>
-                <p>UX / UI developer</p>
+                <p class="legal-name">Jairam Yadav</p>
+                <p>Advocate Supreme Court of india</p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur delectus, mollitia tenetur libero quam recusandae
-                  alias in incidunt.
+                  Faculty of law mumbai university, Ex faculty state
+                  intelligence department, Qualified mediator, Member bombay bar
+                  Association high court, LLM constitutional law, LLM
+                  international law, mba hr...
                 </p>
-                <div class="socials">
+                <!-- <div class="socials">
                   <button class="github">
                     <i class="fab fa-github"></i>
                   </button>
@@ -951,7 +1101,7 @@
                   <button class="pinterest">
                     <i class="fab fa-pinterest-p"></i>
                   </button>
-                </div>
+                </div> -->
               </div>
 
               <div class="legal-card">
@@ -1133,6 +1283,10 @@
         </section>
 
         <!-- 
+        - #Profile
+      -->
+
+        <!-- 
         - #FEATURES
       -->
 
@@ -1236,16 +1390,26 @@
           <div class="container-form">
             <div class="title">GET IN TOUCH</div>
             <div class="content">
-              <form action="https://formsubmit.co/abhay@achieversproperties.in" method="POST" autocomplete="on">
+              <form
+                action="https://formsubmit.co/abhay@achieversproperties.in"
+                method="POST"
+                autocomplete="on"
+              >
                 <div class="user-details">
                   <div class="input-box">
                     <span class="details">Full Name</span>
-                    <input type="text" name="name" placeholder="Enter your name" required />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
                   </div>
                   <div class="input-box">
                     <span class="details">Company name</span>
                     <input
-                      type="text" name="name"
+                      type="text"
+                      name="name"
                       placeholder="Enter your company"
                       required
                     />
@@ -1253,7 +1417,8 @@
                   <div class="input-box">
                     <span class="details">Email</span>
                     <input
-                      type="text" name="email"
+                      type="text"
+                      name="email"
                       placeholder="Enter your email"
                       required
                     />
@@ -1261,7 +1426,8 @@
                   <div class="input-box">
                     <span class="details">Phone Number</span>
                     <input
-                      type="text" name="number"
+                      type="text"
+                      name="number"
                       placeholder="Enter your number"
                       required
                     />
@@ -1291,12 +1457,25 @@
                     </label>
                   </div>
                 </div>
-                <div class="button">
+                <div class="button" onclick="message()">
                   <input type="submit" value="Send" />
-                  <input type="hidden" name="_template" value="table">
-                  <input type="hidden" name="_subject" value="Achievers Web New Enquiry">
-                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="table" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="Achievers Web New Enquiry"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="http://127.0.0.1:5500/homeverse-master/#contact"
+                  />
                 </div>
+                <!-- <div class="message-form">
+                  <div class="success" id="success">Your Message Successfully Sent!</div>
+                  <div class="danger" id="danger">Feilds Can't be Empty!</div>
+              </div> -->
               </form>
             </div>
           </div>
@@ -1699,5 +1878,12 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load",function(){
+    loader.style.display = "none";
+  })
+</script>
+
   </body>
 </html>
