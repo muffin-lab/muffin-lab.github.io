@@ -1280,7 +1280,7 @@ button.pinterest {
   justify-content: center;
   margin: auto;
   align-items: center;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 .container-form {
